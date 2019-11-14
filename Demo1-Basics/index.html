@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hello World</title>
+</head>
+<body>
+    <div id="app" class="container mt-5">
+        <div :class="[fondo]">
+            <h5>Este div puede cambiar de color de acuerdo al input</h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab possimus molestiae necessitatibus cupiditate officiis, explicabo pariatur quasi suscipit. Quasi dicta repellendus labore nulla, optio cupiditate numquam mollitia corrupti recusandae.
+            </p>
+        </div>
+        <input type="text" class="form-control" v-model="fondo">
+        <br>
+        <div class="text-white p-3" :class="{'bg-info': color, 'bg-success': !color}">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio reiciendis praesentium sint repellendus quidem deleniti fugit autem sunt magni nihil cumque officia aliquam perspiciatis voluptatum aperiam, hic dignissimos totam! Similique?
+        </div>
+        <button class="btn btn-primary" @click="color = !color">Cambiar</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
